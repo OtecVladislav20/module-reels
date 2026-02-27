@@ -72,7 +72,7 @@ export function renderReelsModal(stories = []) {
 
     const titleEl = slide.querySelector('[data-reel="title"]');
     const textEl = slide.querySelector('[data-reel="text"]');
-    const mediaRoot = slide.querySelector('[data-reel-media]');
+    const mediasRoot = slide.querySelector('[data-reel-medias]');
 
     if (titleEl) titleEl.textContent = story.title || '';
     if (textEl) textEl.textContent = story.text || '';
@@ -86,8 +86,23 @@ export function renderReelsModal(stories = []) {
       });
     }
 
-    const mediaEl = createStoryMediaEl(story.items?.[0], story.title || 'Рилс');
-    if (mediaEl && mediaRoot) mediaRoot.append(mediaEl);
+    if (mediasRoot) {
+      mediasRoot.replaceChildren();
+
+      (story.items || []).forEach((item, index) => {
+        const mediaSlot = document.createElement('div');
+        mediaSlot.className = 'reels-modal__content';
+        mediaSlot.dataset.reelMedia = '';
+        mediaSlot.dataset.segmentIndex = String(index);
+
+        if (index !== 0) mediaSlot.hidden = true;
+
+        const mediaEl = createStoryMediaEl(item, story.title || 'Рилс');
+        if (mediaEl) mediaSlot.append(mediaEl);
+
+        mediasRoot.append(mediaSlot);
+      });
+    }
 
     frag.append(slide);
   });
