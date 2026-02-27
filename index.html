@@ -1,0 +1,1402 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonsai</title>
+    <meta
+      name="description"
+      content="Шаблон-агрегатор: список ресторанов, карточка ресторана, контакты."
+    />
+
+    <link rel="stylesheet" href="/src/styles/index.scss" />
+  </head>
+  <body>
+    @@include("@/templates/components/header.html")
+    @@include("@/templates/components/contact-buttons.html")
+
+    <main>
+      <section class="intro">
+        <div class="container">
+          <div class="intro__top">
+            <a class="intro__geo" href="/" target="_blank" rel="noindex nofollow">
+              <div><img src="/images/logos/yandex-map.svg" alt="Яндекс Карты" /></div>
+              <div class="intro__rating icon icon--star icon--after">5,0</div>
+            </a>
+            <h1 class="intro__title h1">Ресторан паназиатской кухни нового уровня</h1>
+            <p class="intro__subtitle">
+              Соединили традиции Востока и современный стиль, чтобы каждый ужин превращался
+              в гастрономическое путешествие.
+            </p>
+          </div>
+          <div class="intro__buttons">
+            <button
+              class="button button--primary button--arrow"
+              data-modal-id="table"
+              data-subject="Забронировать стол (главная)"
+            >
+              Забронировать стол
+            </button>
+            <a href="#menu" class="button button--secondary button--arrow">Посмотреть меню</a>
+          </div>
+        </div>
+      </section>
+
+      @@include('@/templates/blocks/reels.html')
+
+      <section id="menu" class="section menu">
+        <div class="container">
+          <div class="section__top section__top--center">
+            <h2 class="h2">Паназиатские блюда, к&nbsp;которым хочется возвращаться</h2>
+          </div>
+          <div class="section__middle">
+            <div class="menu__list">
+              <div class="menu__item">
+                <div class="menu__title">
+                  <div class="menu__icon icon icon--menu"></div>
+                  <div>
+                    <div class="menu__pic">
+                      <img src="/images/menu/menu.webp" alt="Стол с едой" loading="lazy" />
+                    </div>
+                    <h3 class="h3">Основное меню</h3>
+                  </div>
+                </div>
+                <div class="menu__picture">
+                  <div class="menu__img">
+                    <img src="/images/menu/menu.webp" alt="Стол с едой" loading="lazy" />
+                  </div>
+                </div>
+                <div class="menu__description">
+                  <p class="body-text-reg icon icon--rhomb">
+                    Это современная интерпретация классических блюд с уважением к традициям,
+                    используя сезонные продукты и уникальные техники для передачи чистоты вкуса.
+                  </p>
+                </div>
+                <div class="menu__btn">
+                  <a
+                    class="button button--ghost button--arrow"
+                    href="/files/menu.pdf"
+                    target="_blank"
+                  >
+                    Посмотреть меню
+                  </a>
+                </div>
+              </div>
+              <div class="menu__item">
+                <div class="menu__title">
+                  <div class="menu__icon icon icon--menu"></div>
+                  <div>
+                    <div class="menu__pic">
+                      <img src="/images/menu/menu.webp" alt="Стол с едой" loading="lazy" />
+                    </div>
+                    <h3 class="h3">Основное меню</h3>
+                  </div>
+                </div>
+                <div class="menu__picture">
+                  <div class="menu__img">
+                    <img src="/images/menu/menu.webp" alt="Стол с едой" loading="lazy" />
+                  </div>
+                </div>
+                <div class="menu__description">
+                  <p class="body-text-reg icon icon--rhomb">
+                    Это современная интерпретация классических блюд с уважением к традициям,
+                    используя сезонные продукты и уникальные техники для передачи чистоты вкуса.
+                  </p>
+                </div>
+                <div class="menu__btn">
+                  <a
+                    class="button button--ghost button--arrow"
+                    href="/files/menu.pdf"
+                    target="_blank"
+                  >
+                    Посмотреть меню
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container">
+          <div class="section__top section__top--center">
+            <h2 class="h2">Паназиатская классика в современном пространстве</h2>
+            <p class="subtitle">
+              Наш ресторан — это место, где паназиатская кухня встречается с современной
+              гастрономией. Мы вдохновляемся восточными традициями и создаём блюда, которые передают
+              гармонию вкуса с использованием только свежих, сезонных ингредиентов.
+            </p>
+          </div>
+          <div class="section__middle">
+            <div class="swiper-shell" data-swiper="about">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="about__img">
+                      <img
+                        src="/images/about/about.webp"
+                        alt="Официант разносит еду"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="about__img">
+                      <img
+                        src="/images/about/about.webp"
+                        alt="Официант разносит еду"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="about__img">
+                      <img
+                        src="/images/about/about.webp"
+                        alt="Официант разносит еду"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination swiper-pagination-about"></div>
+              <div class="swiper-buttons">
+                <button
+                  class="swiper-btn swiper-btn--left swiper-btn-about-prev"
+                  type="button"
+                ></button>
+                <button class="swiper-btn swiper-btn-about-next" type="button"></button>
+              </div>
+            </div>
+
+            <div class="about__list scrollable">
+              <div class="about__item">
+                <h2 class="h2">5000+</h2>
+                <div class="about__text">Довольных гостей</div>
+                <div class="about__icon icon icon--rhomb"></div>
+              </div>
+              <div class="about__item">
+                <h2 class="h2">100+</h2>
+                <div class="about__text">Авторских блюд</div>
+                <div class="about__icon icon icon--rhomb"></div>
+              </div>
+              <div class="about__item">
+                <h2 class="h2">10 лет</h2>
+                <div class="about__text">Опыт работы</div>
+                <div class="about__icon icon icon--rhomb"></div>
+              </div>
+              <div class="about__item">
+                <h2 class="h2">7</h2>
+                <div class="about__text">Стран Азии в одной концепции</div>
+                <div class="about__icon icon icon--rhomb"></div>
+              </div>
+            </div>
+            <button
+              class="button button--primary button--arrow"
+              data-modal-id="table"
+              data-subject="Забронировать стол (о ресторане)"
+            >
+              Забронировать стол
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="actions" class="section actions">
+        <div class="container">
+          <div class="section__top section__top--row">
+            <h2 class="h2">Незабываемые события для каждого гостя</h2>
+            <p class="subtitle">
+              От частных ужинов до тематических вечеров — мы создаем уникальные события, которые
+              оставляют яркие воспоминания.
+            </p>
+          </div>
+          <div class="section__middle">
+            <div class="swiper-shell" data-swiper="actions">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div
+                      class="actions__item"
+                      data-modal-id="table"
+                      data-subject="Забронировать стол (акции)"
+                    >
+                      <div class="actions__content">
+                        <h3 class="h3">Семейные праздники</h3>
+                        <p class="small-text-reg">
+                          Уютный зал с понятным меню — идеальное место для встреч с близкими
+                          в комфортной атмосфере.
+                        </p>
+                      </div>
+                      <button class="button button--trans button--arrow">Забронировать стол</button>
+                      <div class="actions__img">
+                        <img src="/images/actions/actions-1.webp" alt="" loading="lazy" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="actions__item"
+                      data-modal-id="table"
+                      data-subject="Забронировать стол (акции)"
+                    >
+                      <div class="actions__content">
+                        <h3 class="h3">Семейные праздники</h3>
+                        <p class="small-text-reg">
+                          Уютный зал с понятным меню — идеальное место для встреч с близкими
+                          в комфортной атмосфере.
+                        </p>
+                      </div>
+                      <button class="button button--trans button--arrow">Забронировать стол</button>
+                      <div class="actions__img">
+                        <img src="/images/actions/actions-1.webp" alt="" loading="lazy" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="actions__item"
+                      data-modal-id="table"
+                      data-subject="Забронировать стол (акции)"
+                    >
+                      <div class="actions__content">
+                        <h3 class="h3">Семейные праздники</h3>
+                        <p class="small-text-reg">
+                          Уютный зал с понятным меню — идеальное место для встреч с близкими
+                          в комфортной атмосфере.
+                        </p>
+                      </div>
+                      <button class="button button--trans button--arrow">Забронировать стол</button>
+                      <div class="actions__img">
+                        <img src="/images/actions/actions-1.webp" alt="" loading="lazy" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="actions__item"
+                      data-modal-id="table"
+                      data-subject="Забронировать стол (акции)"
+                    >
+                      <div class="actions__content">
+                        <h3 class="h3">Семейные праздники</h3>
+                        <p class="small-text-reg">
+                          Уютный зал с понятным меню — идеальное место для встреч с близкими
+                          в комфортной атмосфере.
+                        </p>
+                      </div>
+                      <button class="button button--trans button--arrow">Забронировать стол</button>
+                      <div class="actions__img">
+                        <img src="/images/actions/actions-1.webp" alt="" loading="lazy" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="actions__item"
+                      data-modal-id="table"
+                      data-subject="Забронировать стол (акции)"
+                    >
+                      <div class="actions__content">
+                        <h3 class="h3">Семейные праздники</h3>
+                        <p class="small-text-reg">
+                          Уютный зал с понятным меню — идеальное место для встреч с близкими
+                          в комфортной атмосфере.
+                        </p>
+                      </div>
+                      <button class="button button--trans button--arrow">Забронировать стол</button>
+                      <div class="actions__img">
+                        <img src="/images/actions/actions-1.webp" alt="" loading="lazy" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-buttons">
+                <button
+                  class="swiper-btn swiper-btn--left swiper-btn-actions-prev"
+                  type="button"
+                ></button>
+                <button class="swiper-btn swiper-btn-actions-next" type="button"></button>
+              </div>
+            </div>
+          </div>
+          <div class="section__bottom">
+            <button
+              class="button button--primary button--arrow"
+              data-modal-id="table"
+              data-subject="Забронировать стол (акции)"
+            >
+              Забронировать стол
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section party">
+        <div class="container">
+          <div class="section__top section__top--row">
+            <h2 class="h2">Уникальные события и вечеринки в нашем ресторане</h2>
+            <div class="subtitle">
+              Не упустите шанс стать частью уникальных мероприятий нашего ресторана! Следите
+              за нашими предстоящими событиями, от гастрономических вечеров до тематических
+              вечеринок.
+            </div>
+          </div>
+          <div class="section__middle">
+            <div class="swiper-shell" data-swiper="party">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="party__item">
+                      <div class="party__img">
+                        <img
+                          src="/images/party/party.webp"
+                          alt="Вечеринка за столом"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="party__content">
+                        <div class="party__header">
+                          <div class="small-text-reg party__date icon icon--calendar">
+                            31.12.2025
+                          </div>
+                          <div class="small-text-reg party__date icon icon--clock">21:00</div>
+                        </div>
+                        <div class="party__title">
+                          <h3 class="h3">Новый год, который запомнится</h3>
+                          <div class="party__text small-text-reg">
+                            Продуманная праздничная программа, музыка, свет и настроение.
+                            Торжественный отсчёт, бокалы шампанского.
+                          </div>
+                        </div>
+                        <button
+                          class="button button--primary button--arrow"
+                          data-modal-id="table"
+                          data-subject="Забронировать стол (вечеринки)"
+                        >
+                          Забронировать стол
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="party__item">
+                      <div class="party__img">
+                        <img
+                          src="/images/party/party.webp"
+                          alt="Вечеринка за столом"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="party__content">
+                        <div class="party__header">
+                          <div class="small-text-reg party__date icon icon--calendar">
+                            31.12.2025
+                          </div>
+                          <div class="small-text-reg party__date icon icon--clock">21:00</div>
+                        </div>
+                        <div class="party__title">
+                          <h3 class="h3">Новый год, который запомнится</h3>
+                          <div class="party__text small-text-reg">
+                            Продуманная праздничная программа, музыка, свет и настроение.
+                            Торжественный отсчёт, бокалы шампанского.
+                          </div>
+                        </div>
+                        <button
+                          class="button button--primary button--arrow"
+                          data-modal-id="table"
+                          data-subject="Забронировать стол (вечеринки)"
+                        >
+                          Забронировать стол
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="party__item">
+                      <div class="party__img">
+                        <img
+                          src="/images/party/party.webp"
+                          alt="Вечеринка за столом"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="party__content">
+                        <div class="party__header">
+                          <div class="small-text-reg party__date icon icon--calendar">
+                            31.12.2025
+                          </div>
+                          <div class="small-text-reg party__date icon icon--clock">21:00</div>
+                        </div>
+                        <div class="party__title">
+                          <h3 class="h3">Новый год, который запомнится</h3>
+                          <div class="party__text small-text-reg">
+                            Продуманная праздничная программа, музыка, свет и настроение.
+                            Торжественный отсчёт, бокалы шампанского.
+                          </div>
+                        </div>
+                        <button
+                          class="button button--primary button--arrow"
+                          data-modal-id="table"
+                          data-subject="Забронировать стол (вечеринки)"
+                        >
+                          Забронировать стол
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="party__item">
+                      <div class="party__img">
+                        <img
+                          src="/images/party/party.webp"
+                          alt="Вечеринка за столом"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="party__content">
+                        <div class="party__header">
+                          <div class="small-text-reg party__date icon icon--calendar">
+                            31.12.2025
+                          </div>
+                          <div class="small-text-reg party__date icon icon--clock">21:00</div>
+                        </div>
+                        <div class="party__title">
+                          <h3 class="h3">Новый год, который запомнится</h3>
+                          <div class="party__text small-text-reg">
+                            Продуманная праздничная программа, музыка, свет и настроение.
+                            Торжественный отсчёт, бокалы шампанского.
+                          </div>
+                        </div>
+                        <button
+                          class="button button--primary button--arrow"
+                          data-modal-id="table"
+                          data-subject="Забронировать стол (вечеринки)"
+                        >
+                          Забронировать стол
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-buttons">
+                <button
+                  class="swiper-btn swiper-btn--left swiper-btn-party-prev"
+                  type="button"
+                ></button>
+                <button class="swiper-btn swiper-btn-party-next" type="button"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="photo" class="section photo">
+        <div class="container">
+          <div class="section__top section__top--center">
+            <h2 class="h2">Каждый момент в нашем ресторане заслуживает внимания</h2>
+            <div class="subtitle">
+              Посмотрите, как каждый уголок, каждое блюдо и каждая деталь отражают нашу страсть к
+              кулинарии и уникальному стилю.
+            </div>
+          </div>
+          <div class="section__middle">
+            <div class="swiper-shell" data-swiper="photo">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="photo__img">
+                      <img src="/images/photo/photo.webp" alt="Интерьер ресторана" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="photo__img">
+                      <img src="/images/photo/photo.webp" alt="Интерьер ресторана" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="photo__img">
+                      <img src="/images/photo/photo.webp" alt="Интерьер ресторана" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="photo__img">
+                      <img src="/images/photo/photo.webp" alt="Интерьер ресторана" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="photo__img">
+                      <img src="/images/menu/menu.webp" alt="Интерьер ресторана" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="photo__img">
+                      <img src="/images/photo/photo.webp" alt="Интерьер ресторана" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-buttons">
+                <button
+                  class="swiper-btn swiper-btn--left swiper-btn-photo-prev"
+                  type="button"
+                ></button>
+                <button class="swiper-btn swiper-btn-photo-next" type="button"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="section review">
+        <div class="container">
+          <div class="section__left">
+            <div class="section__top section__top--left">
+              <h2 class="h2">Читайте отзывы о сервисе и&nbsp;делитесь мнением о кухне</h2>
+              <div class="subtitle">
+                Ознакомьтесь с другими отзывами наших посетителей на популярных платформах
+              </div>
+            </div>
+            <div class="grid grid--3 scrollable">
+              <a href="/" class="review__panel" target="_blank" rel="noindex nofollow">
+                <div class="review__logo">
+                  <img src="/images/logos/yandex-map-black.svg" alt="" loading="lazy" />
+                </div>
+                <div class="review__score icon icon--star icon--after">4.7</div>
+              </a>
+              <a href="/" class="review__panel" target="_blank" rel="noindex nofollow">
+                <div class="review__logo">
+                  <img src="/images/logos/gis-black.svg" alt="" loading="lazy" />
+                </div>
+                <div class="review__score icon icon--star icon--after">4.7</div>
+              </a>
+              <a href="/" class="review__panel" target="_blank" rel="noindex nofollow ">
+                <div class="review__logo">
+                  <img src="/images/logos/google-maps-black.svg" alt="" loading="lazy" />
+                </div>
+                <div class="review__score icon icon--star icon--after">4.7</div>
+              </a>
+              <a href="/" class="review__panel" target="_blank" rel="noindex nofollow">
+                <div class="review__logo">
+                  <img src="/images/logos/flamp-black.svg" alt="" loading="lazy" />
+                </div>
+                <div class="review__score icon icon--star icon--after">4.7</div>
+              </a>
+              <a href="/" class="review__panel" target="_blank" rel="noindex nofollow">
+                <div class="review__logo">
+                  <img src="/images/logos/otzovik-black.svg" alt="" loading="lazy" />
+                </div>
+                <div class="review__score icon icon--star icon--after">4.7</div>
+              </a>
+            </div>
+          </div>
+          <div class="section__right">
+            <div class="swiper-shell" data-swiper="review">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="review__item">
+                      <div class="review__header">
+                        <div class="review__avatar">
+                          <img src="/images/review/avatar.jpg" alt="" loading="lazy" />
+                        </div>
+                        <div class="review__avtor">
+                          <div class="review__name">Александра</div>
+                          <div class="review__stars">
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                          </div>
+                        </div>
+                        <div class="review__date small-text-reg">16.01.2026</div>
+                      </div>
+                      <div class="review__description">
+                        <div class="review__text">
+                          Это был один из самых незабываемых ужинов! Атмосфера ресторана просто
+                          волшебная: мягкий свет, уютные уголки и внимательное обслуживание создают
+                          особое настроение. Блюда — настоящие произведения искусства, каждый
+                          ингредиент подобран с любовью и вниманием к деталям. Мы с друзьями
+                          пробовали несколько позиций из меню, и все были в восторге. Особенно
+                          понравился авторский коктейль, который идеально дополнил нашу трапезу.
+                          Сервис был на высшем уровне, чувствуется, что здесь действительно ценят
+                          каждого гостя. Обязательно вернёмся и порекомендуем этот ресторан всем
+                          своим друзьям!
+                        </div>
+                        <button
+                          class="button button--ghost button--arrow"
+                          data-modal-id="review"
+                          data-subject="Читать отзыв полностью"
+                        >
+                          Читать полностью
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review__item">
+                      <div class="review__header">
+                        <div class="review__avatar">
+                          <img src="/images/review/avatar.jpg" alt="" loading="lazy" />
+                        </div>
+                        <div class="review__avtor">
+                          <div class="review__name">Александра</div>
+                          <div class="review__stars">
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                          </div>
+                        </div>
+                        <div class="review__date small-text-reg">16.01.2026</div>
+                      </div>
+                      <div class="review__description">
+                        <div class="review__text">
+                          Это был один из самых незабываемых ужинов! Атмосфера ресторана просто
+                          волшебная: мягкий свет, уютные уголки и внимательное обслуживание создают
+                          особое настроение. Блюда — настоящие произведения искусства, каждый
+                          ингредиент подобран с любовью и вниманием к деталям. Мы с друзьями
+                          пробовали несколько позиций из меню, и все были в восторге. Особенно
+                          понравился авторский коктейль, который идеально дополнил нашу трапезу.
+                          Сервис был на высшем уровне, чувствуется, что здесь действительно ценят
+                          каждого гостя. Обязательно вернёмся и порекомендуем этот ресторан всем
+                          своим друзьям!
+                        </div>
+                        <button
+                          class="button button--ghost button--arrow"
+                          data-modal-id="review"
+                          data-subject="Читать отзыв полностью"
+                        >
+                          Читать полностью
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review__item">
+                      <div class="review__header">
+                        <div class="review__avatar">
+                          <img src="/images/review/avatar.jpg" alt="" loading="lazy" />
+                        </div>
+                        <div class="review__avtor">
+                          <div class="review__name">Александра</div>
+                          <div class="review__stars">
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                          </div>
+                        </div>
+                        <div class="review__date small-text-reg">16.01.2026</div>
+                      </div>
+                      <div class="review__description">
+                        <div class="review__text">
+                          Это был один из самых незабываемых ужинов! Атмосфера ресторана просто
+                          волшебная: мягкий свет, уютные уголки и внимательное обслуживание создают
+                          особое настроение. Блюда — настоящие произведения искусства, каждый
+                          ингредиент подобран с любовью и вниманием к деталям. Мы с друзьями
+                          пробовали несколько позиций из меню, и все были в восторге. Особенно
+                          понравился авторский коктейль, который идеально дополнил нашу трапезу.
+                          Сервис был на высшем уровне, чувствуется, что здесь действительно ценят
+                          каждого гостя. Обязательно вернёмся и порекомендуем этот ресторан всем
+                          своим друзьям!
+                        </div>
+                        <button
+                          class="button button--ghost button--arrow"
+                          data-modal-id="review"
+                          data-subject="Читать отзыв полностью"
+                        >
+                          Читать полностью
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review__item">
+                      <div class="review__header">
+                        <div class="review__avatar">
+                          <img src="/images/review/avatar.jpg" alt="" loading="lazy" />
+                        </div>
+                        <div class="review__avtor">
+                          <div class="review__name">Александра</div>
+                          <div class="review__stars">
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                            <div class="review__star icon icon--star"></div>
+                          </div>
+                        </div>
+                        <div class="review__date small-text-reg">16.01.2026</div>
+                      </div>
+                      <div class="review__description">
+                        <div class="review__text">
+                          Это был один из самых незабываемых ужинов! Атмосфера ресторана просто
+                          волшебная: мягкий свет, уютные уголки и внимательное обслуживание создают
+                          особое настроение. Блюда — настоящие произведения искусства, каждый
+                          ингредиент подобран с любовью и вниманием к деталям. Мы с друзьями
+                          пробовали несколько позиций из меню, и все были в восторге. Особенно
+                          понравился авторский коктейль, который идеально дополнил нашу трапезу.
+                          Сервис был на высшем уровне, чувствуется, что здесь действительно ценят
+                          каждого гостя. Обязательно вернёмся и порекомендуем этот ресторан всем
+                          своим друзьям!
+                        </div>
+                        <button
+                          class="button button--ghost button--arrow"
+                          data-modal-id="review"
+                          data-subject="Читать отзыв полностью"
+                        >
+                          Читать полностью
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-buttons">
+                <button
+                  class="swiper-btn swiper-btn--left swiper-btn-review-prev"
+                  type="button"
+                ></button>
+                <button class="swiper-btn swiper-btn-review-next" type="button"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="special" class="section stocks">
+        <div class="container">
+          <div class="section__top section__top--row">
+            <h2 class="h2">Не упустите наши эксклюзивные предложения</h2>
+            <div class="subtitle">
+              Следите за актуальными предложениями и воспользуйтесь выгодными акциями в нашем
+              ресторане.
+            </div>
+          </div>
+          <div class="section__middle">
+            <div class="swiper-shell" data-swiper="stocks">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div
+                      class="stocks__item"
+                      data-modal-id="table"
+                      data-subject="Забронировать стол (акции)"
+                    >
+                      <div class="stocks__content">
+                        <div class="stocks__date small-text-reg icon icon--clock">
+                          Пн–Пт с 12:00 до 16:00
+                        </div>
+                        <div class="stocks__info">
+                          <h3 class="h4">Бизнес-ланч по будням</h3>
+                          <div class="stocks__text">
+                            Сбалансированные сеты паназиатской кухни по специальной цене. Идеальное
+                            решение для деловой встречи или вкусного перерыва в середине
+                            рабочего дня.
+                          </div>
+                        </div>
+                      </div>
+                      <button class="button button--trans button--arrow">Забронировать стол</button>
+                      <div class="stocks__img">
+                        <img
+                          src="/images/stocks/stocks.webp"
+                          alt="Стол полный еды"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="stocks__item"
+                      data-modal-id="table"
+                      data-subject="Забронировать стол (акции)"
+                    >
+                      <div class="stocks__content">
+                        <div class="stocks__date small-text-reg icon icon--clock">
+                          Пн–Пт с 12:00 до 16:00
+                        </div>
+                        <div class="stocks__info">
+                          <h3 class="h4">Бизнес-ланч по будням</h3>
+                          <div class="stocks__text">
+                            Сбалансированные сеты паназиатской кухни по специальной цене. Идеальное
+                            решение для деловой встречи или вкусного перерыва в середине
+                            рабочего дня.
+                          </div>
+                        </div>
+                      </div>
+                      <button class="button button--trans button--arrow">Забронировать стол</button>
+                      <div class="stocks__img">
+                        <img
+                          src="/images/stocks/stocks.webp"
+                          alt="Стол полный еды"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="stocks__item"
+                      data-modal-id="table"
+                      data-subject="Забронировать стол (акции)"
+                    >
+                      <div class="stocks__content">
+                        <div class="stocks__date small-text-reg icon icon--clock">
+                          Пн–Пт с 12:00 до 16:00
+                        </div>
+                        <div class="stocks__info">
+                          <h3 class="h4">Бизнес-ланч по будням</h3>
+                          <div class="stocks__text">
+                            Сбалансированные сеты паназиатской кухни по специальной цене. Идеальное
+                            решение для деловой встречи или вкусного перерыва в середине
+                            рабочего дня.
+                          </div>
+                        </div>
+                      </div>
+                      <button class="button button--trans button--arrow">Забронировать стол</button>
+                      <div class="stocks__img">
+                        <img
+                          src="/images/stocks/stocks.webp"
+                          alt="Стол полный еды"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-buttons">
+                <button
+                  class="swiper-btn swiper-btn--left swiper-btn-stocks-prev"
+                  type="button"
+                ></button>
+                <button class="swiper-btn swiper-btn-stocks-next" type="button"></button>
+              </div>
+            </div>
+          </div>
+          <div class="section__bottom">
+            <button
+              class="button button--primary button--arrow"
+              data-modal-id="table"
+              data-subject="Забронировать стол (акции)"
+            >
+              Забронировать стол
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog" class="section blog">
+        <div class="container">
+          <div class="section__top section__top--row">
+            <h2 class="h2">Интересные статьи о гастрономии и культуре</h2>
+            <div class="subtitle">
+              Читайте наши материалы о паназиатской кухне, тенденциях в гастрономии и секретах
+              приготовления.
+            </div>
+          </div>
+          <div class="section__middle">
+            <div class="swiper-shell" data-swiper="blog">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="pages/single-blog.html" class="blog__item">
+                      <div class="blog__top">
+                        <div class="blog__img">
+                          <img
+                            src="/images/blog/blog.webp"
+                            alt="Стол с экзотической едой"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="button button--trans button--arrow">Читать статью</div>
+                      </div>
+                      <div class="blog__bottom">
+                        <div class="blog__info">
+                          <div class="blog__icon small-text-reg icon icon--calendar">
+                            05.09.2025
+                          </div>
+                          <div class="blog__icon small-text-reg icon icon--clock">5 мин</div>
+                          <div class="blog__icon small-text-reg icon icon--view">75</div>
+                        </div>
+                        <div class="blog__content">
+                          <h4 class="h4">
+                            Современная паназиатская кухня: традиции, которые вдохновляют
+                          </h4>
+                          <p class="blog__text">
+                            Паназиатская кухня — это гармоничное сочетание культур, техник и вкусов
+                            разных стран Восточной Азии. Сегодня она переживает новую волну
+                            популярности, объединяя древние традиции с авторским подходом и
+                            современными гастрономическими тенденциями.
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="pages/single-blog.html" class="blog__item">
+                      <div class="blog__top">
+                        <div class="blog__img">
+                          <img
+                            src="/images/blog/blog.webp"
+                            alt="Стол с экзотической едой"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="button button--trans button--arrow">Читать статью</div>
+                      </div>
+                      <div class="blog__bottom">
+                        <div class="blog__info">
+                          <div class="blog__icon small-text-reg icon icon--calendar">
+                            05.09.2025
+                          </div>
+                          <div class="blog__icon small-text-reg icon icon--clock">5 мин</div>
+                          <div class="blog__icon small-text-reg icon icon--view">75</div>
+                        </div>
+                        <div class="blog__content">
+                          <h4 class="h4">
+                            Современная паназиатская кухня: традиции, которые вдохновляют
+                          </h4>
+                          <p class="blog__text">
+                            Паназиатская кухня — это гармоничное сочетание культур, техник и вкусов
+                            разных стран Восточной Азии. Сегодня она переживает новую волну
+                            популярности, объединяя древние традиции с авторским подходом и
+                            современными гастрономическими тенденциями.
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="pages/single-blog.html" class="blog__item">
+                      <div class="blog__top">
+                        <div class="blog__img">
+                          <img
+                            src="/images/blog/blog.webp"
+                            alt="Стол с экзотической едой"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="button button--trans button--arrow">Читать статью</div>
+                      </div>
+                      <div class="blog__bottom">
+                        <div class="blog__info">
+                          <div class="blog__icon small-text-reg icon icon--calendar">
+                            05.09.2025
+                          </div>
+                          <div class="blog__icon small-text-reg icon icon--clock">5 мин</div>
+                          <div class="blog__icon small-text-reg icon icon--view">75</div>
+                        </div>
+                        <div class="blog__content">
+                          <h4 class="h4">
+                            Современная паназиатская кухня: традиции, которые вдохновляют
+                          </h4>
+                          <p class="blog__text">
+                            Паназиатская кухня — это гармоничное сочетание культур, техник и вкусов
+                            разных стран Восточной Азии. Сегодня она переживает новую волну
+                            популярности, объединяя древние традиции с авторским подходом и
+                            современными гастрономическими тенденциями.
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="pages/single-blog.html" class="blog__item">
+                      <div class="blog__top">
+                        <div class="blog__img">
+                          <img
+                            src="/images/blog/blog.webp"
+                            alt="Стол с экзотической едой"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="button button--trans button--arrow">Читать статью</div>
+                      </div>
+                      <div class="blog__bottom">
+                        <div class="blog__info">
+                          <div class="blog__icon small-text-reg icon icon--calendar">
+                            05.09.2025
+                          </div>
+                          <div class="blog__icon small-text-reg icon icon--clock">5 мин</div>
+                          <div class="blog__icon small-text-reg icon icon--view">75</div>
+                        </div>
+                        <div class="blog__content">
+                          <h4 class="h4">
+                            Современная паназиатская кухня: традиции, которые вдохновляют
+                          </h4>
+                          <p class="blog__text">
+                            Паназиатская кухня — это гармоничное сочетание культур, техник и вкусов
+                            разных стран Восточной Азии. Сегодня она переживает новую волну
+                            популярности, объединяя древние традиции с авторским подходом и
+                            современными гастрономическими тенденциями.
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="pages/single-blog.html" class="blog__item">
+                      <div class="blog__top">
+                        <div class="blog__img">
+                          <img
+                            src="/images/blog/blog.webp"
+                            alt="Стол с экзотической едой"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="button button--trans button--arrow">Читать статью</div>
+                      </div>
+                      <div class="blog__bottom">
+                        <div class="blog__info">
+                          <div class="blog__icon small-text-reg icon icon--calendar">
+                            05.09.2025
+                          </div>
+                          <div class="blog__icon small-text-reg icon icon--clock">5 мин</div>
+                          <div class="blog__icon small-text-reg icon icon--view">75</div>
+                        </div>
+                        <div class="blog__content">
+                          <h4 class="h4">
+                            Современная паназиатская кухня: традиции, которые вдохновляют
+                          </h4>
+                          <p class="blog__text">
+                            Паназиатская кухня — это гармоничное сочетание культур, техник и вкусов
+                            разных стран Восточной Азии. Сегодня она переживает новую волну
+                            популярности, объединяя древние традиции с авторским подходом и
+                            современными гастрономическими тенденциями.
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-buttons">
+                <button
+                  class="swiper-btn swiper-btn--left swiper-btn-blog-prev"
+                  type="button"
+                ></button>
+                <button class="swiper-btn swiper-btn-blog-next" type="button"></button>
+              </div>
+            </div>
+          </div>
+          <div class="section__bottom">
+            <a href="pages/archive-blog.html" class="button button--secondary button--arrow"
+              >Смотреть все статьи</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section team">
+        <div class="container">
+          <div class="section__top section__top--center">
+            <h2 class="h2">Присоединяйтесь к нашей дружной команде</h2>
+          </div>
+          <div class="section__middle">
+            <table class="team__table">
+              <tbody>
+                <tr>
+                  <td class="h4">Официант</td>
+                  <td class="small-text-reg">
+                    Мы ищем энергичного и дружелюбного официанта в нашу команду! Если ты любишь
+                    общение с людьми, умеешь работать в команде и хочешь развиваться в сфере
+                    гостеприимства — будем рады видеть тебя у нас.
+                  </td>
+                  <td class="small-text-reg">Без опыта</td>
+                  <td class="h4">от 55 000 ₽</td>
+                  <td>
+                    <button
+                      class="button button--ghost button--arrow"
+                      data-modal-id="vacanci"
+                      data-subject="Читать подробнее (вакансии)"
+                    >
+                      Читать подробнее
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="h4">Официант</td>
+                  <td class="small-text-reg">
+                    Мы ищем энергичного и дружелюбного официанта в нашу команду! Если ты любишь
+                    общение с людьми, умеешь работать в команде и хочешь развиваться в сфере
+                    гостеприимства — будем рады видеть тебя у нас.
+                  </td>
+                  <td class="small-text-reg">Без опыта</td>
+                  <td class="h4">от 55 000 ₽</td>
+                  <td>
+                    <button
+                      class="button button--ghost button--arrow"
+                      data-modal-id="vacanci"
+                      data-subject="Читать подробнее (вакансии)"
+                    >
+                      Читать подробнее
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="h4">Официант</td>
+                  <td class="small-text-reg">
+                    Мы ищем энергичного и дружелюбного официанта в нашу команду! Если ты любишь
+                    общение с людьми, умеешь работать в команде и хочешь развиваться в сфере
+                    гостеприимства — будем рады видеть тебя у нас.
+                  </td>
+                  <td class="small-text-reg">Без опыта</td>
+                  <td class="h4">от 55 000 ₽</td>
+                  <td>
+                    <button
+                      class="button button--ghost button--arrow"
+                      data-modal-id="vacanci"
+                      data-subject="Читать подробнее (вакансии)"
+                    >
+                      Читать подробнее
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="team__list scrollable">
+              <div class="team__item">
+                <div class="team__header">
+                  <div class="team__position h4">Официант</div>
+                  <div class="team__desc small-text-reg">
+                    Мы ищем энергичного и дружелюбного официанта в нашу команду! Если ты любишь
+                    общение с людьми, умеешь работать в команде и хочешь развиваться в сфере
+                    гостеприимства — будем рады видеть тебя у нас.
+                  </div>
+                </div>
+                <div class="team__exp">Без опыта</div>
+                <div class="team__bottom">
+                  <div class="team__cost h4">от 55 000 ₽</div>
+                  <button
+                    class="button button--ghost button--arrow"
+                    data-modal-id="vacanci"
+                    data-subject="Читать подробнее (вакансии)"
+                  >
+                    Читать подробнее
+                  </button>
+                </div>
+              </div>
+              <div class="team__item">
+                <div class="team__header">
+                  <div class="team__position h4">Официант</div>
+                  <div class="team__desc small-text-reg">
+                    Мы ищем энергичного и дружелюбного официанта в нашу команду! Если ты любишь
+                    общение с людьми, умеешь работать в команде и хочешь развиваться в сфере
+                    гостеприимства — будем рады видеть тебя у нас.
+                  </div>
+                </div>
+                <div class="team__exp">Без опыта</div>
+                <div class="team__bottom">
+                  <div class="team__cost h4">от 55 000 ₽</div>
+                  <button
+                    class="button button--ghost button--arrow"
+                    data-modal-id="vacanci"
+                    data-subject="Читать подробнее (вакансии)"
+                  >
+                    Читать подробнее
+                  </button>
+                </div>
+              </div>
+              <div class="team__item">
+                <div class="team__header">
+                  <div class="team__position h4">Официант</div>
+                  <div class="team__desc small-text-reg">
+                    Мы ищем энергичного и дружелюбного официанта в нашу команду! Если ты любишь
+                    общение с людьми, умеешь работать в команде и хочешь развиваться в сфере
+                    гостеприимства — будем рады видеть тебя у нас.
+                  </div>
+                </div>
+                <div class="team__exp">Без опыта</div>
+                <div class="team__bottom">
+                  <div class="team__cost h4">от 55 000 ₽</div>
+                  <button
+                    class="button button--ghost button--arrow"
+                    data-modal-id="vacanci"
+                    data-subject="Читать подробнее (вакансии)"
+                  >
+                    Читать подробнее
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section__bottom">
+            <button
+              class="button button--primary button--arrow"
+              data-modal-id="all-vacanci"
+              data-subject="Все вакансии"
+            >
+              Откликнуться
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" class="section contacts">
+        <div class="container">
+          <div class="section__left">
+            <div class="section__top section__top--left">
+              <h2 class="h2">Контактная информация</h2>
+              <div class="subtitle">
+                Мы с нетерпением ждем вас! У нас всегда вкусно и уютно, а также вы сможете
+                насладиться приятной атмосферой и отличным обслуживанием.
+              </div>
+            </div>
+            <div class="section__middle">
+              <div class="contacts__text">
+                Ознакомьтесь с отзывами наших посетителей на популярных платформах
+              </div>
+              <div class="grid grid--2">
+                <a href="/" class="contacts__panel" target="_blank" rel="noindex nofollow">
+                  <div class="contacts__logo">
+                    <img src="/images/logos/gis-black.svg" alt="Яндекс Карты" loading="lazy" />
+                  </div>
+                  <div class="contacts__rating icon icon--star icon--after">4.7</div>
+                </a>
+                <a href="/" class="contacts__panel" target="_blank" rel="noindex nofollow">
+                  <div class="contacts__logo">
+                    <img
+                      src="/images/logos/yandex-map-black.svg"
+                      alt="Яндекс Карты"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="contacts__rating icon icon--star icon--after">4.7</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="section__right">
+            <div class="grid grid--2 contacts__grid-info">
+              <div class="contacts__item">
+                <div class="contacts__label small-text-reg">Адрес:</div>
+                <div class="contacts__text">
+                  г. Москва, улица Коммунистическая имени В. И. Ленина, д. 142
+                </div>
+              </div>
+              <div class="contacts__item">
+                <div class="contacts__label small-text-reg">Режим работы:</div>
+                <div class="contacts__text">
+                  <div>Вс–Чт: 12:00–23:00</div>
+                  <div>Пт–Сб: 12:00–03:00</div>
+                </div>
+              </div>
+              <div class="contacts__item">
+                <div class="contacts__label small-text-reg">Номер телефона:</div>
+                <div class="contacts__text">
+                  <a href="tel:+79999999999" target="_blank" rel="noindex nofollow"
+                    >+7 (999) 999-99-99</a
+                  >
+                </div>
+              </div>
+              <div class="contacts__item">
+                <div class="contacts__label small-text-reg">Почта:</div>
+                <div class="contacts__text">
+                  <a href="mailto:email@gamil.com" target="_blank" rel="noindex nofollow"
+                    >email@gamil.com</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="grid grid--2 contacts__grid-links">
+              <div class="contacts__links">
+                <div class="contacts__label">Соцсети:</div>
+                <div class="contacts__contacts">
+                  <a
+                    target="_blank"
+                    rel="noindex nofollow"
+                    href="/"
+                    class="contacts__link icon icon--telegram"
+                  ></a>
+                  <a
+                    target="_blank"
+                    rel="noindex nofollow"
+                    href="/"
+                    class="contacts__link icon icon--vk"
+                  ></a>
+                  <a
+                    target="_blank"
+                    rel="noindex nofollow"
+                    href="/"
+                    class="contacts__link icon icon--max"
+                  ></a>
+                  <a
+                    target="_blank"
+                    rel="noindex nofollow"
+                    href="/"
+                    class="contacts__link icon icon--classmates"
+                  ></a>
+                  <a
+                    target="_blank"
+                    rel="noindex nofollow"
+                    href="/"
+                    class="contacts__link icon icon--rutube"
+                  ></a>
+                </div>
+              </div>
+              <div class="contacts__links">
+                <div class="contacts__buttons">
+                  <button class="button button--primary button--arrow">Вызвать такси</button>
+                  <button class="button button--secondary button--arrow">Проложить маршрут</button>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__map" data-map>
+              <iframe
+                src="https://yandex.com/map-widget/v1/?um=constructor%3A160ba15cd43f975f3f73f4c3e95df93e7b371d9a6f2cf0d2722329849d4acbdf&amp;source=constructor"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <div class="section__middle section__middle--mob">
+              <div class="contacts__text">
+                Ознакомьтесь с отзывами наших посетителей на популярных платформах
+              </div>
+              <div class="grid grid--2">
+                <a href="/" class="contacts__panel" target="_blank" rel="noindex nofollow">
+                  <div>
+                    <img src="/images/logos/gis-black.svg" alt="Яндекс Карты" loading="lazy" />
+                  </div>
+                  <div class="contacts__rating icon icon--star icon--after">4.7</div>
+                </a>
+                <a href="/" class="contacts__panel" target="_blank" rel="noindex nofollow">
+                  <div>
+                    <img
+                      src="/images/logos/yandex-map-black.svg"
+                      alt="Яндекс Карты"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="contacts__rating icon icon--star icon--after">4.7</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      @@include("@/templates/blocks/form-block.html")
+    </main>
+
+    @@include("@/templates/components/footer.html")
+    @@include("@/templates/components/modal-call.html")
+    @@include("@/templates/components/modal-thanks.html")
+    @@include("@/templates/components/modal-table.html")
+    @@include("@/templates/components/modal-success.html")
+    @@include("@/templates/components/modal-vacanci.html")
+    @@include("@/templates/components/modal-vacanci-success.html")
+    @@include("@/templates/components/modal-all-vacanci.html")
+    @@include("@/templates/components/modal-review.html")
+
+    <script type="module" src="/src/js/index.js"></script>
+  </body>
+</html>

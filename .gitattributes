@@ -1,0 +1,12 @@
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.svg text eol=lf
+
+.husky/* text eol=lf
+*.sh text eol=lf

@@ -1,0 +1,28 @@
+$icons-path: '/images/icons/mono';
+
+$icons: (
+  'agree',
+  'calendar-time',
+  'calendar',
+  'classmates',
+  'clock',
+  'copy',
+  'max',
+  'menu',
+  'phone',
+  'rhomb',
+  'rutube',
+  'star',
+  'telegram',
+  'view',
+  'vk',
+  'x',
+);
+
+@each $icon in $icons {
+  .icon--#{$icon}::before,
+  .icon--#{$icon}::after {
+    -webkit-mask-image: url('#{$icons-path}/#{$icon}.svg');
+    mask-image: url('#{$icons-path}/#{$icon}.svg');
+  }
+}

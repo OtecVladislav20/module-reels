@@ -1,0 +1,23 @@
+$vp-768: 769px;
+$vp-1280: 1280px;
+$vp-1920: 1920px;
+
+:root {
+  --font-title: 'Nunito Sans', sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  --font-body: 'Inter', sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+
+  --primary: #5f3420;
+  --bg-2: rgba(240, 229, 218, 1);
+
+  --white: #fff;
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-80: rgba(255, 255, 255, 0.8);
+
+  --black: #26211f;
+  --grey-25: #fcfcfc;
+  --grey-200: #e1d3c7;
+  --grey-400: #b89f93;
+  --grey-600: #685e5a;
+
+  --error: #d02d3c;
+}

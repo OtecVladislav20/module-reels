@@ -1,0 +1,147 @@
+@use '../abstracts/mixins' as *;
+
+.section {
+  padding: 40rem 0;
+  overflow: hidden;
+
+  @include vp-1280 {
+    padding: 80rem 0;
+  }
+
+  &__top {
+    display: flex;
+    gap: 10rem;
+    margin-bottom: 32rem;
+
+    @include vp-1280 {
+      margin-bottom: 60rem;
+    }
+
+    &--center {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20rem;
+    }
+
+    &--left {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &--row {
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-between;
+      gap: 12rem;
+
+      @include vp-1280 {
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-between;
+      }
+    }
+
+    .h2 {
+      color: var(--black);
+    }
+
+    .subtitle {
+      color: var(--grey-600);
+    }
+  }
+
+  &__middle {
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32rem;
+
+    @include vp-1280 {
+      margin-top: 60rem;
+    }
+  }
+}
+
+.container {
+  position: relative;
+  margin-inline: auto;
+  height: 100%;
+  width: 328rem;
+  padding: 0;
+
+  @include vp-768 {
+    width: 100%;
+    padding: 0 80rem;
+  }
+
+  @include vp-1280 {
+    width: 1760rem;
+    padding: 0;
+  }
+}
+
+.grid {
+  display: grid;
+
+  &--2 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40rem 20rem;
+
+    @include vp-1280 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--3 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20rem;
+
+    @include vp-768 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include vp-1280 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &--6 {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10rem;
+  }
+}
+
+.scrollable {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  margin-inline: calc(50% - 50vw);
+  padding-inline: 16rem;
+
+  scroll-padding-left: 16rem;
+  scroll-padding-right: 16rem;
+
+  @include vp-768 {
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  @include vp-1280 {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

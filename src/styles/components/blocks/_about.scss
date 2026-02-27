@@ -1,0 +1,157 @@
+@use '../../abstracts/mixins' as *;
+
+.about {
+  .section__middle {
+    position: relative;
+    padding-top: 390rem;
+
+    @include vp-1280 {
+      padding-top: 618rem;
+    }
+  }
+
+  .swiper-shell {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: -8rem;
+    right: -8rem;
+    top: 0;
+    z-index: 0;
+
+    @include vp-1280 {
+      left: -60rem;
+      right: -60rem;
+    }
+  }
+
+  .swiper {
+    height: 430rem;
+
+    @include vp-1280 {
+      height: 700rem;
+    }
+  }
+
+  .swiper-buttons {
+    display: none;
+    width: 94%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include vp-1280 {
+      display: flex;
+    }
+  }
+
+  .swiper-pagination-about {
+    position: absolute;
+    width: auto !important;
+    top: 12rem !important;
+    bottom: auto !important;
+    left: 8rem !important;
+    right: 8rem !important;
+    z-index: 10;
+    display: flex;
+    gap: 8rem;
+
+    @include vp-1280 {
+      display: none;
+    }
+
+    .swiper-pagination-bullet {
+      flex: 1;
+      height: 2rem;
+      margin: 0 !important;
+      border-radius: 999rem;
+      background: rgba(255, 255, 255, 0.2);
+      opacity: 1;
+
+      &.swiper-pagination-bullet-active {
+        background: var(--white);
+      }
+    }
+  }
+
+  &__img {
+    height: 100%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  h2 {
+    width: 100%;
+
+    @include vp-1280 {
+      width: 940rem;
+    }
+  }
+
+  .subtitle {
+    width: 100%;
+
+    @include vp-1280 {
+      width: 860rem;
+    }
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    gap: 8rem;
+    margin-bottom: 16rem;
+
+    @include vp-1280 {
+      margin-bottom: 40rem;
+      gap: 20rem;
+    }
+  }
+
+  &__item {
+    scroll-snap-align: start;
+    position: relative;
+    background-color: var(--bg-2);
+    padding: 16rem;
+    flex: 0 0 220rem;
+
+    @include vp-1280 {
+      padding: 30rem;
+      flex: 1;
+    }
+
+    .h2 {
+      width: 100%;
+      color: var(--primary);
+      margin-bottom: 12rem;
+
+      @include vp-1280 {
+        margin-bottom: 20rem;
+      }
+    }
+  }
+
+  &__text {
+    color: var(--grey-600);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 12rem;
+    right: 12rem;
+    color: var(--primary);
+
+    &::before {
+      min-width: 10rem;
+      min-height: 10rem;
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@use '../../abstracts/mixins' as *;
+
+.modal-thanks {
+  .modal__top {
+    margin: 0;
+  }
+
+  .subtitle {
+    width: 100%;
+
+    @include vp-768 {
+      width: 430rem;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    height: 40rem;
+    background-color: var(--white);
+    border: 1rem solid var(--grey-400);
+
+    @include vp-768 {
+      width: 50rem;
+      height: 50rem;
+    }
+  }
+}

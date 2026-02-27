@@ -1,0 +1,84 @@
+@use '../icons.generated';
+@use '../abstracts/variables' as *;
+$icons-path: '../images/icons/mono';
+
+.icon {
+  position: relative;
+  line-height: 1;
+  vertical-align: middle;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 24rem;
+    height: 24rem;
+
+    @media (max-width: 728px) {
+      width: 20rem;
+      height: 20rem;
+    }
+
+    background-color: currentColor;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+  &::after {
+    content: none;
+  }
+
+  &.icon--after {
+    &::before {
+      content: none;
+    }
+    &::after {
+      content: '';
+    }
+  }
+}
+
+.icon {
+  transition: all 0.3s ease;
+
+  &--telegram {
+    &:hover {
+      color: var(--white);
+      background-color: #23a0dd;
+    }
+  }
+  &--vk {
+    &:hover {
+      color: var(--white);
+      background-color: #366eff;
+    }
+  }
+  &--max {
+    &:hover {
+      color: var(--white);
+      background-color: #7565df;
+    }
+  }
+  &--classmates {
+    &:hover {
+      color: var(--white);
+      background-color: #ff8800;
+    }
+  }
+  &--rutube {
+    &:hover {
+      color: var(--white);
+      background-color: #100943;
+    }
+  }
+  &--copy {
+    &:hover {
+      color: var(--white);
+      background-color: #000000;
+    }
+  }
+}

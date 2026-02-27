@@ -1,0 +1,13 @@
+@use '../../abstracts/mixins' as *;
+
+.modal-call {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem;
+
+    @include vp-768 {
+      gap: 30rem;
+    }
+  }
+}

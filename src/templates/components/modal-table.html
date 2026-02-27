@@ -1,0 +1,54 @@
+<div class="modal modal-table" data-modal="table">
+  <div class="modal__block">
+    <button class="modal__close icon icon--x" data-modal-close="table"></button>
+    <div class="modal__top">
+      <h2 class="h2">Забронировать стол</h2>
+    </div>
+    <div class="modal__middle">
+      <form
+        action=""
+        class="modal-call__form"
+        data-success-modal="success"
+        data-close-modal="table"
+      >
+        <input type="hidden" name="subject" value="" />
+
+        <div class="modal-table__inputs">
+          <label class="input">
+            <span>Имя</span>
+            <input
+              name="name"
+              type="text"
+              autocomplete="name"
+              placeholder="Иван"
+              minlength="2"
+              maxlength="50"
+              required
+            />
+          </label>
+          <label class="input">
+            <span>Номер телефона</span>
+            <input
+              name="phone"
+              type="tel"
+              inputmode="tel"
+              autocomplete="tel"
+              placeholder="+7 (000) 000-00-00"
+              required
+            />
+          </label>
+        </div>
+        <div class="form-block__bottom">
+          <label class="checkbox">
+            <input type="checkbox" required />
+            <span class="caption">
+              Я согласен с <a href="/">политикой конфиденциальности</a> и даю согласие на обработку
+              персональных данных.
+            </span>
+          </label>
+          <button type="submit" class="button button--primary button--arrow">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+{
+  "name": "internal-restaurant-template",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "icons:sync": "node src/js/libs/icons-sync.mjs",
+    "icons:watch": "chokidar \"public/images/icons/icons.inbox.svg\" -c \"npm run icons:sync\""
+  },
+  "dependencies": {
+    "swiper": "^11.2.10"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "imask": "^7.6.1",
+    "prettier": "^3.8.1",
+    "sass": "^1.70.0",
+    "svgo": "^4.0.0",
+    "vite": "^7.3.1"
+  }
+}

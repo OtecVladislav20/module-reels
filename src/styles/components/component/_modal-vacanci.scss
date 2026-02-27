@@ -1,0 +1,137 @@
+@use '../../abstracts/mixins' as *;
+
+.modal-vacanci {
+  .modal__block {
+    max-width: 328rem;
+
+    @include vp-768 {
+      max-width: 1030rem;
+    }
+  }
+
+  .h3 {
+    display: none;
+    @include vp-768 {
+      display: block;
+    }
+  }
+
+  &__info {
+    max-height: 250rem;
+    background-color: var(--grey-200);
+    padding: 12rem;
+    overflow-y: auto;
+    margin-bottom: 24rem;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--grey-200);
+
+    &::-webkit-scrollbar {
+      width: 8rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--grey-200);
+      border-radius: 999rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 999rem;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--black);
+    }
+
+    @include vp-768 {
+      margin-bottom: 40rem;
+      max-height: 500rem;
+      padding: 30rem 40rem;
+    }
+
+    p {
+      margin-bottom: 20rem;
+    }
+
+    ul {
+      margin-bottom: 20rem;
+
+      li {
+        display: flex;
+        align-items: start;
+        gap: 10rem;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 7rem;
+          height: 7rem;
+          min-width: 7rem;
+          min-height: 7rem;
+          background-color: var(--primary);
+          margin-top: 6rem;
+
+          @include vp-768 {
+            margin-top: 10rem;
+          }
+        }
+      }
+    }
+
+    h4 {
+      @include bodyTextBold;
+      margin-bottom: 10rem;
+      margin-top: 20rem;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12rem;
+    width: 100%;
+
+    @media (max-width: 767px) {
+      > .input:nth-of-type(1) {
+        order: 1;
+      }
+      > .input:nth-of-type(2) {
+        order: 2;
+      }
+      > .checkbox {
+        order: 3;
+      }
+      > .button {
+        order: 4;
+      }
+    }
+
+    @include vp-768 {
+      gap: 20rem;
+      margin-top: 10rem;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: end;
+    }
+
+    .input {
+      width: 100%;
+
+      @include vp-768 {
+        width: 30%;
+      }
+    }
+
+    .button {
+      padding: 14rem;
+      width: 100%;
+
+      @include vp-768 {
+        width: 30%;
+        padding: 16rem;
+      }
+    }
+  }
+}

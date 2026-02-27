@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonsai</title>
+    <meta
+      name="description"
+      content="Шаблон-агрегатор: список ресторанов, карточка ресторана, контакты."
+    />
+
+    <link rel="stylesheet" href="/src/styles/index.scss" />
+  </head>
+  <body>
+    @@include("@/templates/components/header.html")
+    <main class="error-page">
+      <div class="container">
+        <div class="breadcrumbs">
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li class="current">
+              <span>404</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="container">
+          <div class="error-page__content">
+            <div class="error-page__img"><img src="../images/404/404.svg" alt="Ошибка 404" /></div>
+            <h1 class="h2">Извините, страница не найдена</h1>
+            <div class="error-page__text">
+              Запрашиваемой вами страницы не существует. Возможно, она была удалена или в запросе
+              был указан неверный адрес страницы. Попробуйте вернуться на главную страницу.
+            </div>
+            <a href="/" class="button button--primary button--arrow">Вернуться на главную</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include("@/templates/components/footer.html")
+    @@include("@/templates/components/modal-table.html")
+    @@include("@/templates/components/modal-thanks.html")
+    @@include("@/templates/components/modal-call.html")
+    @@include("@/templates/components/modal-success.html")
+
+    <script type="module" src="/src/js/index.js"></script>
+  </body>
+</html>

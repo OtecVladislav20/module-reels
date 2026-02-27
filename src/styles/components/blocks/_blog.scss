@@ -1,0 +1,136 @@
+@use '../../abstracts/mixins' as *;
+
+.blog {
+  background-color: var(--bg-2);
+
+  .h2 {
+    width: 100%;
+
+    @include vp-1280 {
+      width: 860rem;
+    }
+  }
+
+  .subtitle {
+    width: 100%;
+
+    @include vp-1280 {
+      width: 560rem;
+    }
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+
+  &__item {
+    cursor: pointer;
+
+    &:hover {
+      .blog__img {
+        &::after {
+          opacity: 1;
+        }
+      }
+      .button {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__top {
+    position: relative;
+    height: 170rem;
+
+    @include vp-1280 {
+      height: 322rem;
+    }
+
+    .button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .swiper-buttons {
+    display: none;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include vp-1280 {
+      display: flex;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+    padding: 20rem;
+    background-color: var(--white);
+
+    @include vp-1280 {
+      padding: 30rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 20rem;
+  }
+
+  &__icon {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+
+    @include vp-1280 {
+      gap: 10rem;
+    }
+
+    &::after {
+      color: var(--primary);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+  }
+
+  &__text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    color: var(--grey-600);
+  }
+}

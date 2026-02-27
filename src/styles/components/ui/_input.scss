@@ -1,0 +1,52 @@
+@use '../../abstracts/mixins' as *;
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include vp-768 {
+    gap: 10rem;
+  }
+
+  span {
+    color: var(--grey-600);
+  }
+
+  input {
+    padding: 12rem 20rem;
+    color: var(--black);
+    outline: none;
+    background-color: var(--white);
+    border: 1rem solid transparent;
+    @include bodyTextReg;
+
+    @include vp-768 {
+      padding: 14rem 20rem;
+    }
+
+    &:hover {
+      border: 1rem solid var(--grey-400);
+    }
+
+    &:focus {
+      border: 1rem solid var(--grey-400);
+    }
+
+    &:disabled {
+      border: 1rem solid var(--grey-200);
+      background-color: var(--grey-50);
+    }
+
+    &::placeholder {
+      color: var(--grey-600);
+      opacity: 1;
+    }
+  }
+
+  &.error {
+    input {
+      border: 1rem solid var(--error);
+    }
+  }
+}

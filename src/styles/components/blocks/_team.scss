@@ -1,0 +1,118 @@
+@use '../../abstracts/mixins' as *;
+
+.team {
+  .h2 {
+    width: 100%;
+
+    @include vp-1280 {
+      width: 840rem;
+    }
+  }
+
+  &__table {
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+
+    @include vp-1280 {
+      display: flex;
+    }
+
+    tr {
+      background-color: transparent;
+      border-bottom: 1rem solid var(--primary);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: var(--bg-2);
+      }
+    }
+
+    th,
+    td {
+      padding: 30rem;
+
+      &:nth-of-type(1) {
+        width: 20%;
+        text-align: left;
+      }
+      &:nth-of-type(2) {
+        width: 40%;
+        text-align: left;
+        color: var(--grey-600);
+      }
+      &:nth-of-type(3) {
+        text-align: center;
+        width: 20%;
+        color: var(--primary);
+      }
+      &:nth-of-type(4) {
+        width: 15%;
+        text-align: center;
+      }
+      &:nth-of-type(5) {
+        width: 15%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 8rem;
+
+    @include vp-1280 {
+      display: none !important;
+    }
+  }
+
+  &__item {
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 300rem;
+    gap: 12rem;
+    background-color: var(--bg-2);
+    padding: 20rem;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+
+  &__desc {
+    color: var(--grey-600);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  &__exp {
+    color: var(--primary);
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20rem;
+
+    @include vp-1280 {
+      flex-direction: row;
+      gap: 0rem;
+    }
+
+    .button {
+      width: auto;
+      flex: 0 0 auto;
+      margin-left: 0;
+
+      @include vp-1280 {
+        margin-left: auto;
+      }
+    }
+  }
+}

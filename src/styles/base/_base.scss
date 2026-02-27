@@ -1,0 +1,66 @@
+@use 'sass:string';
+@use '../abstracts/mixins' as *;
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  @include bodyTextReg;
+
+  padding: 0 !important;
+
+  &.modal-opened {
+    overflow: hidden;
+  }
+}
+
+main {
+  padding-top: 60rem;
+  background-color: var(--grey-25);
+  overflow: hidden;
+
+  @include vp-768 {
+    padding-top: 87rem;
+  }
+}
+
+footer {
+  margin-top: auto;
+}
+
+button {
+  user-select: none;
+}
+
+.swiper-shell {
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: string.unquote($string: 'calc(100vw/1920)');
+  }
+}
+
+@media (min-width: 2000px) {
+  html {
+    font-size: string.unquote('calc(100vw/2560)');
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: string.unquote($string: 'calc(100vw/360)');
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  html {
+    font-size: string.unquote($string: 'calc(100vw/1200)');
+  }
+}

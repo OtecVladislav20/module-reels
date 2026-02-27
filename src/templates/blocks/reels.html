@@ -1,0 +1,55 @@
+<section class="reels section">
+  <div class="container">
+    <div class="swiper-shell" data-swiper="reels">
+      <div class="swiper">
+        <div class="swiper-wrapper" data-reels-preview-wrapper>
+          <template>
+            <div class="swiper-slide" data-modal-id="reels">
+              <div class="reels__item">
+                <div class="reels__preview">
+                  <img data-reel="preview" data-reel-attr="src" alt="Рилс" loading="lazy" />
+                </div>
+                <div class="reels__description small-text-reg" data-reel="title"></div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+      <div class="swiper-buttons">
+        <button class="swiper-btn swiper-btn--left swiper-btn-reels-prev" type="button"></button>
+        <button class="swiper-btn swiper-btn-reels-next" type="button"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal reels-modal" data-modal="reels">
+  <button class="modal__close icon icon--x" data-modal-close="reels"></button>
+  <div class="modal__block reels-modal__block">
+    <div class="swiper" data-swiper="reels-modal">
+      <div class="swiper-wrapper" data-reels-modal-wrapper>
+        <template>
+          <div class="swiper-slide">
+            <div class="reels-modal__item">
+              <div class="reels-modal__header">
+                <div class="reels-modal__bars" data-reel-progress-bars></div>
+                <div class="reels-modal__title">
+                  <div class="small-text-reg" data-reel="title"></div>
+                </div>
+              </div>
+              <div class="reels-modal__contents">
+                <div class="reels-modal__content" data-reel-media></div>
+                <div class="reels-modal__content" data-reel-media></div>
+                <div class="reels-modal__content" data-reel-media></div>
+              </div>
+            </div>
+            <div class="reels-modal__name" data-reel="text"></div>
+            <button class="button button--primary button--arrow" data-modal-id="table">
+              Забронировать стол
+            </button>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</div>

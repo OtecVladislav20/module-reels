@@ -1,0 +1,26 @@
+<div class="modal modal-call" data-modal="call">
+  <div class="modal__block">
+    <button class="modal__close icon icon--x" data-modal-close="call"></button>
+    <div class="modal__top">
+      <h2 class="h2">Заказать звонок</h2>
+      <div class="subtitle">Оставьте ваш номер телефона и мы вам перезвоним.</div>
+    </div>
+    <div class="modal__middle">
+      <form action="" class="modal-call__form" data-success-modal="thanks" data-close-modal="call">
+        <input type="hidden" name="subject" value="" />
+        <label class="input">
+          <span>Номер телефона</span>
+          <input
+            name="phone"
+            type="tel"
+            inputmode="tel"
+            autocomplete="tel"
+            placeholder="+7 (000) 000-00-00"
+            required
+          />
+        </label>
+        <button type="submit" class="button button--primary button--arrow">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>

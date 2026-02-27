@@ -1,0 +1,278 @@
+@use '../abstracts/mixins' as *;
+
+.footer {
+  background-color: var(--black);
+  padding: 42rem 0 40rem 0;
+
+  @include vp-1280 {
+    padding: 100rem 0 40rem 0;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem;
+    width: 100%;
+    padding-bottom: 24rem;
+
+    @include vp-1280 {
+      flex-direction: row;
+      gap: 40rem;
+      padding-bottom: 80rem;
+    }
+  }
+
+  &__left,
+  &__right {
+    width: 100%;
+
+    @include vp-1280 {
+      width: 50%;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 32rem;
+
+    @include vp-1280 {
+      flex-direction: column;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem;
+    justify-content: space-between;
+
+    @include vp-1280 {
+      flex-direction: row;
+      gap: 160rem;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem;
+    justify-content: space-between;
+
+    @include vp-1280 {
+      gap: 50rem;
+    }
+  }
+
+  &__label {
+    color: var(--grey-600);
+    margin-bottom: 12rem;
+
+    @include vp-1280 {
+      margin-bottom: 20rem;
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10rem;
+      color: var(--white);
+      max-height: 120rem;
+      flex-wrap: wrap;
+
+      @include vp-1280 {
+        max-height: 100%;
+      }
+
+      a {
+        border-bottom: 1rem solid transparent;
+        transition: all 0.3s ease;
+
+        &:hover {
+          border-bottom: 1rem solid var(--white);
+        }
+      }
+    }
+  }
+
+  &__panels {
+    display: flex;
+    flex-direction: row;
+    gap: 12rem;
+
+    @include vp-1280 {
+      gap: 10rem;
+      flex-direction: column;
+    }
+  }
+
+  &__panel {
+    width: 290rem;
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 12rem;
+
+    @include vp-1280 {
+      gap: 60rem;
+      padding: 12rem 20rem;
+    }
+  }
+
+  &__logos {
+    width: 100%;
+    max-width: 76rem;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+
+    @include vp-1280 {
+      max-width: 122rem;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    color: var(--white);
+
+    @include vp-1280 {
+      gap: 10rem;
+    }
+
+    &::after {
+      color: rgba(255, 209, 45, 1);
+      width: 16rem;
+      height: 16rem;
+
+      @include vp-1280 {
+        width: 24rem;
+        height: 24rem;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+    color: var(--white);
+
+    @include vp-1280 {
+      gap: 40rem;
+    }
+  }
+
+  &__contact {
+    a {
+      border-bottom: 1rem solid transparent;
+      transition: all 0.3s ease;
+      &:hover {
+        border-bottom: 1rem solid var(--white);
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32rem;
+    height: 32rem;
+    background-color: var(--grey-400);
+
+    &::before {
+      width: 16rem;
+      height: 16rem;
+
+      @include vp-1280 {
+        width: 24rem;
+        height: 24rem;
+      }
+    }
+
+    @include vp-1280 {
+      width: 50rem;
+      height: 50rem;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20rem;
+    color: var(--white);
+
+    @include vp-1280 {
+      gap: 40rem;
+    }
+  }
+
+  &__logo {
+    width: 140rem;
+
+    @include vp-1280 {
+      width: 260rem;
+    }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__bottom {
+    border-top: 1rem solid var(--white-10);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--grey-600);
+    padding-top: 20rem;
+    gap: 12rem;
+
+    @include vp-1280 {
+      flex-direction: row;
+      gap: 0;
+    }
+
+    &-link {
+      display: flex;
+      width: 100%;
+
+      @include vp-1280 {
+        width: 30%;
+      }
+
+      &:nth-of-type(1) {
+        justify-content: start;
+      }
+      &:nth-of-type(2) {
+        justify-content: start;
+        @include vp-1280 {
+          justify-content: center;
+        }
+      }
+      &:nth-of-type(3) {
+        justify-content: start;
+        @include vp-1280 {
+          justify-content: end;
+        }
+      }
+    }
+  }
+}

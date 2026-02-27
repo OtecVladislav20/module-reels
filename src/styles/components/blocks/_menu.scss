@@ -1,0 +1,173 @@
+@use '../../abstracts/mixins' as *;
+
+.menu {
+  h2 {
+    width: 100%;
+    text-align: center;
+
+    @include vp-1280 {
+      width: 940rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+
+    @include vp-768 {
+      flex-direction: row;
+    }
+
+    @include vp-1280 {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: start;
+    padding: 20rem;
+    background-color: var(--bg-2);
+    transition: all 0.5s ease;
+    color: var(--black);
+
+    @include vp-1280 {
+      flex-direction: row;
+      align-items: end;
+      padding: 40rem;
+    }
+
+    &:hover {
+      background-color: var(--bg-2);
+      color: var(--black);
+
+      @include vp-1280 {
+        background-color: var(--primary);
+        color: var(--white);
+      }
+
+      .menu__description {
+        color: var(--grey-600);
+
+        @include vp-1280 {
+          color: var(--white);
+        }
+      }
+
+      .menu__img {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+      }
+
+      .button {
+        color: var(--primary);
+
+        @include vp-1280 {
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 8rem;
+    width: 100%;
+
+    @include vp-1280 {
+      flex-direction: column;
+      gap: 80rem;
+      width: 370rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-80);
+    width: 32rem;
+    height: 32rem;
+    color: var(--primary);
+
+    @include vp-1280 {
+      width: 40rem;
+      height: 40rem;
+    }
+  }
+
+  &__picture {
+    position: relative;
+    width: 260rem;
+    margin: auto 0;
+  }
+
+  &__img {
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: 260rem;
+    height: 325rem;
+    opacity: 0;
+    transform: translateY(-50%) scale(0);
+    transition: all 0.5s ease;
+
+    @include vp-1280 {
+      display: flex;
+    }
+  }
+
+  &__pic {
+    display: block;
+    width: 120rem;
+    height: 150rem;
+    margin-bottom: 16rem;
+
+    @include vp-1280 {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__description {
+    display: flex;
+    align-items: end;
+    width: 100%;
+    color: var(--grey-600);
+    margin-bottom: 12rem;
+
+    @include vp-1280 {
+      width: 575rem;
+      margin: 0;
+    }
+
+    p {
+      display: flex;
+      align-items: start;
+      gap: 12rem;
+
+      &::before {
+        width: 9rem;
+        height: 9rem;
+        min-width: 9rem;
+        min-height: 9rem;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: end;
+  }
+}

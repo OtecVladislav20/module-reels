@@ -1,0 +1,101 @@
+@use '../../abstracts/mixins' as *;
+
+.contact-buttons {
+  position: fixed;
+  right: 16rem;
+  bottom: 16rem;
+  z-index: 40;
+
+  @include vp-768 {
+    right: 20rem;
+    bottom: 40rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: -30rem;
+    bottom: -30rem;
+    left: -10rem;
+    top: -80rem;
+
+    @include vp-768 {
+      right: -30rem;
+      bottom: -30rem;
+      left: -30rem;
+      top: -120rem;
+    }
+  }
+
+  &:hover,
+  &:focus-within {
+    .contact-buttons__item {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+
+    .contact-buttons__list {
+      pointer-events: auto;
+    }
+  }
+}
+
+.contact-buttons__toggle,
+.contact-buttons__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--primary);
+  box-shadow: 0 3rem 10rem 0 rgba(0, 0, 0, 0.2);
+
+  @include vp-768 {
+    width: 60rem;
+    height: 60rem;
+  }
+
+  &:hover {
+    border: 1rem solid var(--grey-600);
+  }
+}
+
+.contact-buttons__toggle {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-buttons__list {
+  position: absolute;
+  display: grid;
+  gap: 4rem;
+  right: 0;
+  bottom: 44rem;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  pointer-events: none;
+
+  @include vp-768 {
+    bottom: 70rem;
+    gap: 10rem;
+    bottom: 70rem;
+  }
+}
+
+.contact-buttons__item {
+  opacity: 1;
+  transition:
+    transform 220ms ease,
+    filter 220ms ease;
+  transition-delay: calc((6 - var(--i)) * 25ms);
+  transform: translateY(calc(var(--i) * 35rem)) scale(1);
+
+  @include vp-768 {
+    transform: translateY(calc(var(--i) * 60rem)) scale(1);
+  }
+}

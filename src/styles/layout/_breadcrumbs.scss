@@ -1,0 +1,70 @@
+@use '../abstracts/mixins' as *;
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 32rem 16rem 0 16rem;
+
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include vp-1280 {
+    justify-content: start;
+    overflow-x: visible;
+    padding: 40rem 0 0 0;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    min-width: max-content;
+    gap: 5rem;
+    color: var(--grey-600);
+
+    @include vp-1280 {
+      gap: 15rem;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    @include smallTextReg;
+    flex: 0 0 auto;
+
+    @include vp-1280 {
+      gap: 15rem;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 4rem;
+      height: 4rem;
+      background-color: var(--primary);
+
+      @include vp-1280 {
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+
+    &:first-child {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .current {
+    color: var(--primary);
+  }
+}

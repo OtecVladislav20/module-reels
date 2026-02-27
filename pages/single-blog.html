@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RestaurantHub — агрегатор ресторанов</title>
+    <meta
+      name="description"
+      content="Шаблон-агрегатор: список ресторанов, карточка ресторана, контакты."
+    />
+
+    <link rel="stylesheet" href="/src/styles/index.scss" />
+  </head>
+  <body>
+    @@include("@/templates/components/header.html")
+
+    <main class="single-page">
+      <div class="container container-single">
+        <div class="breadcrumbs scrollable">
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="pages/archive-blog.html">Блог</a></li>
+            <li class="current">
+              <span>Современная паназиатская кухня: традиции, которые вдохновляют</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="container container-single">
+          <div class="section__top section__top--left">
+            <h1 class="h1">Современная паназиатская кухня: традиции, которые вдохновляют</h1>
+            <p>
+              Паназиатская кухня — это гармоничное сочетание культур, техник и вкусов разных стран
+              Восточной Азии. Сегодня она переживает новую волну популярности, объединяя древние
+              традиции с авторским подходом и современными гастрономическими тенденциями.
+            </p>
+          </div>
+          <div class="section__middle">
+            <div class="single-page__panel">
+              <div class="grid grid--2">
+                <div class="single-page__item icon icon--clock">Время чтения: 5 мин.</div>
+                <div class="single-page__item icon icon--calendar">Дата публикации: 05.09.2025</div>
+                <div class="single-page__item icon icon--view">Просмотров: 75</div>
+                <div class="single-page__item icon icon--calendar-time">
+                  Дата обновления: 05.09.2025
+                </div>
+              </div>
+              <div class="single-page__links">
+                <div class="h4">Поделиться статьёй</div>
+                <ul>
+                  <li>
+                    <a
+                      href="/"
+                      target="_blank"
+                      rel="noindex nofollow"
+                      class="icon icon--vk"
+                      onclick="
+                        window.open(
+                          'https://vk.com/share.php?url=' +
+                            encodeURIComponent(window.location.href),
+                          'Вконтакте',
+                          'width=800,height=300,resizable=yes,toolbar=0,status=0',
+                        );
+                        return false;
+                      "
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/"
+                      target="_blank"
+                      rel="noindex nofollow"
+                      class="icon icon--telegram"
+                      onclick="
+                        window.open(
+                          'https://t.me/share/url?url=' +
+                            window.location.href +
+                            '&title=' +
+                            document.title,
+                          'Telegram',
+                          'width=800,height=300,resizable=yes,toolbar=0,status=0',
+                        );
+                        return false;
+                      "
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" rel="noindex nofollow" class="icon icon--copy"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="single-page__banner">
+              <img
+                src="/images/blog/blog.webp"
+                alt="Почему в Италии так важны простые ингредиенты"
+              />
+            </div>
+            <div class="single-page__content">
+              <h2>Философия кухни: меньше — значит лучше</h2>
+              <p>
+                В Италии еда — это не демонстрация кулинарной техники, а способ раскрыть
+                естественный вкус ингредиента. Здесь не стремятся «перебить» продукт соусами или
+                специями. Напротив, каждый компонент должен быть узнаваемым и честным.
+              </p>
+              <p>
+                Итальянцы верят: если продукт свежий и качественный, ему не нужно ничего лишнего.
+                Поэтому большинство классических блюд строятся всего на 3–5 ингредиентах
+              </p>
+              <h3>Качество продукта — основа вкуса</h3>
+              <ul>
+                <li>оливковое масло холодного отжима</li>
+                <li>спелые сезонные томаты</li>
+                <li>свежие травы (базилик, розмарин, орегано)</li>
+                <li>сыры с защищённым происхождением</li>
+                <li>муку и пасту из твёрдых сортов пшеницы</li>
+              </ul>
+              <h3>Сезонность как часть культуры</h3>
+              <p>
+                Итальянская гастрономия напрямую связана с природным циклом. Весной — артишоки и
+                зелень, летом — томаты и цукини, осенью — грибы и трюфели, зимой — сыры и
+                выдержанные мясные продукты.
+              </p>
+              <h3>Простота как уважение к традициям</h3>
+              <p>
+                Многие итальянские блюда появились как крестьянская еда. Их готовили из доступных
+                ингредиентов, без изысков и сложных техник. Но со временем эта простота стала стилем
+                и философией.
+              </p>
+              <p>
+                Паста aglio e olio, маргарита, ризотто — это не бедность вкуса, а его чистота.
+                Итальянцы считают, что усложнение ради эффекта — признак неуверенности в продукте.
+              </p>
+              <h3>Почему это важно для ресторана</h3>
+              <ol>
+                <li>понятный и честный вкус</li>
+                <li>лёгкость восприятия блюда</li>
+                <li>ощущение аутентичности</li>
+                <li>доверие к кухне и шефу</li>
+              </ol>
+              <h3>Итог</h3>
+              <p>
+                Итальянская кухня учит главному: настоящий вкус рождается не из сложности, а из
+                уважения к продукту. Простые ингредиенты, свежесть, сезонность и баланс — вот почему
+                блюда Италии узнаваемы и любимы во всём мире.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section blog">
+        <div class="container">
+          <div class="section__top section__top--center">
+            <h2 class="h2">Другие статьи</h2>
+          </div>
+          <div class="section__middle">
+            <div class="swiper-shell" data-swiper="blog">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="blog__item">
+                      <div class="blog__top">
+                        <div class="blog__img">
+                          <img src="/images/blog/blog.webp" alt="Стол с экзотической едой" />
+                        </div>
+                        <div class="button button--trans button--arrow">Читать статью</div>
+                      </div>
+                      <div class="blog__bottom">
+                        <div class="blog__info">
+                          <div class="blog__icon icon icon--calendar">05.09.2025</div>
+                          <div class="blog__icon icon icon--clock">5 мин</div>
+                          <div class="blog__icon icon icon--view">75</div>
+                        </div>
+                        <div class="blog__content">
+                          <h4 class="h4">
+                            Современная паназиатская кухня: традиции, которые вдохновляют
+                          </h4>
+                          <p class="blog__text">
+                            Паназиатская кухня — это гармоничное сочетание культур, техник и вкусов
+                            разных стран Восточной Азии. Сегодня она переживает новую волну
+                            популярности, объединяя древние традиции с авторским подходом и
+                            современными гастрономическими тенденциями.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="blog__item">
+                      <div class="blog__top">
+                        <div class="blog__img">
+                          <img src="/images/blog/blog.webp" alt="Стол с экзотической едой" />
+                        </div>
+                        <div class="button button--trans button--arrow">Читать статью</div>
+                      </div>
+                      <div class="blog__bottom">
+                        <div class="blog__info">
+                          <div class="blog__icon icon icon--calendar">05.09.2025</div>
+                          <div class="blog__icon icon icon--clock">5 мин</div>
+                          <div class="blog__icon icon icon--view">75</div>
+                        </div>
+                        <div class="blog__content">
+                          <h4 class="h4">
+                            Современная паназиатская кухня: традиции, которые вдохновляют
+                          </h4>
+                          <p class="blog__text">
+                            Паназиатская кухня — это гармоничное сочетание культур, техник и вкусов
+                            разных стран Восточной Азии. Сегодня она переживает новую волну
+                            популярности, объединяя древние традиции с авторским подходом и
+                            современными гастрономическими тенденциями.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="blog__item">
+                      <div class="blog__top">
+                        <div class="blog__img">
+                          <img src="/images/blog/blog.webp" alt="Стол с экзотической едой" />
+                        </div>
+                        <div class="button button--trans button--arrow">Читать статью</div>
+                      </div>
+                      <div class="blog__bottom">
+                        <div class="blog__info">
+                          <div class="blog__icon icon icon--calendar">05.09.2025</div>
+                          <div class="blog__icon icon icon--clock">5 мин</div>
+                          <div class="blog__icon icon icon--view">75</div>
+                        </div>
+                        <div class="blog__content">
+                          <h4 class="h4">
+                            Современная паназиатская кухня: традиции, которые вдохновляют
+                          </h4>
+                          <p class="blog__text">
+                            Паназиатская кухня — это гармоничное сочетание культур, техник и вкусов
+                            разных стран Восточной Азии. Сегодня она переживает новую волну
+                            популярности, объединяя древние традиции с авторским подходом и
+                            современными гастрономическими тенденциями.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="blog__item">
+                      <div class="blog__top">
+                        <div class="blog__img">
+                          <img src="/images/blog/blog.webp" alt="Стол с экзотической едой" />
+                        </div>
+                        <div class="button button--trans button--arrow">Читать статью</div>
+                      </div>
+                      <div class="blog__bottom">
+                        <div class="blog__info">
+                          <div class="blog__icon icon icon--calendar">05.09.2025</div>
+                          <div class="blog__icon icon icon--clock">5 мин</div>
+                          <div class="blog__icon icon icon--view">75</div>
+                        </div>
+                        <div class="blog__content">
+                          <h4 class="h4">
+                            Современная паназиатская кухня: традиции, которые вдохновляют
+                          </h4>
+                          <p class="blog__text">
+                            Паназиатская кухня — это гармоничное сочетание культур, техник и вкусов
+                            разных стран Восточной Азии. Сегодня она переживает новую волну
+                            популярности, объединяя древние традиции с авторским подходом и
+                            современными гастрономическими тенденциями.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="blog__item">
+                      <div class="blog__top">
+                        <div class="blog__img">
+                          <img src="/images/blog/blog.webp" alt="Стол с экзотической едой" />
+                        </div>
+                        <div class="button button--trans button--arrow">Читать статью</div>
+                      </div>
+                      <div class="blog__bottom">
+                        <div class="blog__info">
+                          <div class="blog__icon icon icon--calendar">05.09.2025</div>
+                          <div class="blog__icon icon icon--clock">5 мин</div>
+                          <div class="blog__icon icon icon--view">75</div>
+                        </div>
+                        <div class="blog__content">
+                          <h4 class="h4">
+                            Современная паназиатская кухня: традиции, которые вдохновляют
+                          </h4>
+                          <p class="blog__text">
+                            Паназиатская кухня — это гармоничное сочетание культур, техник и вкусов
+                            разных стран Восточной Азии. Сегодня она переживает новую волну
+                            популярности, объединяя древние традиции с авторским подходом и
+                            современными гастрономическими тенденциями.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-buttons">
+                <button
+                  class="swiper-btn swiper-btn--left swiper-btn-blog-prev"
+                  type="button"
+                ></button>
+                <button class="swiper-btn swiper-btn-blog-next" type="button"></button>
+              </div>
+            </div>
+          </div>
+          <div class="section__bottom">
+            <button class="button button--secondary button--arrow">Смотреть все статьи</button>
+          </div>
+        </div>
+      </section>
+
+      @@include("@/templates/blocks/form-block.html")
+    </main>
+
+    @@include("@/templates/components/footer.html")
+    @@include("@/templates/components/modal-table.html")
+    @@include("@/templates/components/modal-thanks.html")
+    @@include("@/templates/components/modal-call.html")
+    @@include("@/templates/components/modal-success.html")
+
+    <script type="module" src="/src/js/index.js"></script>
+  </body>
+</html>

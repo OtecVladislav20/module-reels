@@ -1,0 +1,129 @@
+@use '../../abstracts/mixins' as *;
+
+.actions {
+  background-color: var(--bg-2);
+
+  .section__bottom {
+    display: flex;
+
+    @include vp-1280 {
+      display: none;
+    }
+  }
+
+  .h2 {
+    width: 100%;
+
+    @include vp-1280 {
+      width: 590rem;
+    }
+  }
+
+  .subtitle {
+    width: 100%;
+    color: var(--grey-600);
+
+    @include vp-1280 {
+      width: 560rem;
+    }
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    aspect-ratio: 1/1;
+  }
+
+  .swiper-buttons {
+    display: none;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include vp-1280 {
+      display: flex;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    align-items: end;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    isolation: isolate;
+    color: var(--white);
+    padding: 20rem;
+
+    @include vp-1280 {
+      padding: 30rem;
+    }
+
+    &:hover {
+      .button {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%);
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 60%);
+      mask-image: linear-gradient(to top, #000 0%, transparent 60%);
+    }
+
+    &::before {
+      z-index: 1;
+      height: 70%;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 100%);
+      mask-image: linear-gradient(to top, #000 0%, transparent 100%);
+    }
+
+    .button {
+      pointer-events: none;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+
+    p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 7;
+      overflow: hidden;
+    }
+  }
+
+  &__img {
+    z-index: -1;
+    position: absolute;
+    pointer-events: none;
+    inset: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

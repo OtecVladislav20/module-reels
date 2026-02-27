@@ -1,0 +1,23 @@
+@use '../../abstracts/mixins' as *;
+
+.modal-review {
+  .modal__block {
+    padding: 20rem;
+
+    @include vp-768 {
+      padding: 30rem;
+    }
+  }
+
+  .review__item {
+    padding: 0;
+  }
+
+  .review__text {
+    display: block;
+  }
+
+  .modal__close {
+    background-color: var(--bg-2);
+  }
+}
